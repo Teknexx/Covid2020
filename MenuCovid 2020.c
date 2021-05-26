@@ -1,5 +1,5 @@
-/* Florian TURMEL octobre/novembre/decembre 2020*/
-/*Menu en couleurs, fonctions et main*/
+/* Code par Teknexx */
+/* https://github.com/Teknexx */
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -19,7 +19,7 @@ void gotoligcol( int lig, int col ){
     SetConsoleCursorPosition( GetStdHandle( STD_OUTPUT_HANDLE ), mycoord );
 }
 
-void centre(char * string){ //centrer un chaine de caractère au milieu de la console (modifier LARGEURF_CONS si la console est plus petite
+void centre(char * string){ //centrer un chaine de caractÃ¨re au milieu de la console (modifier LARGEURF_CONS si la console est plus petite
     int i = 0;
     printf("\n");
     while (i< (LARGEUR_CONS - strlen(string)) / 2){
@@ -29,7 +29,7 @@ void centre(char * string){ //centrer un chaine de caractère au milieu de la con
     printf("%s",string);
 }
 
-void bas_droite(char * string){ //mettre un élément dans le coin a droite
+void bas_droite(char * string){ //mettre un Ã©lÃ©ment dans le coin a droite
     int i = 0;
     gotoligcol(HAUTEUR_CONS-2,(LARGEUR_CONS - strlen(string)-3));
     printf("%s",string);
@@ -355,7 +355,7 @@ void Rencontre(Tlieu * plieux, Tlieu * pdebutlieux, Tcitoyen * pcitoyens, Tcitoy
     gotoligcol(16,47);printf("%s %s                      ",pcitoyens->nom,pcitoyens->prenom);
     gotoligcol(17,47);printf("%s %s                      ",pcitoyens->pnext->nom,pcitoyens->pnext->prenom);
     gotoligcol(0,0);
-    while( charac != 13){ //menu déroulant
+    while( charac != 13){ //menu dÃ©roulant
         charac = getch();
         if(charac == 224){
             charac2 = getch();
@@ -553,7 +553,7 @@ void EnregistreSituation(Tlieu * plieux, Tlieu * pdebutlieux, Tcitoyen * pcitoye
                 fprintf(fParticipants,"%s\n",pdeplacement->ppersonne->prenom);
             }
         }
-        fprintf(fParticipants,"£\n");
+        fprintf(fParticipants,"Â£\n");
 		plieux = plieux->pavant;
 	}
 	fprintf(fParticipants,"$");
@@ -681,7 +681,7 @@ void OuvrirSituation(Tparticipant * pparticipants, Tparticipant * pdebutparticip
         fscanf(fParticipants, "%s",string);
         plieux = pdebutlieux->pavant;
         while(string[0] != '$'){
-            while(string[0] != '£'){
+            while(string[0] != 'Â£'){
                 //creation du maillon participants et suppression des liens avec pdebutparticipants
                 pparticipants = pdebutparticipants;
                 pparticipants->psuivant =(Tparticipant *)malloc(sizeof(Tparticipant));
