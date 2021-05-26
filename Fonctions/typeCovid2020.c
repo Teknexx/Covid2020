@@ -1,5 +1,5 @@
-/* Florian TURMEL octobre/novembre/decembre 2020*/
-/*Declaration des types du projet Covid2020 2020*/
+/* Code par Teknexx */
+/* https://github.com/Teknexx */
 
 #include <stdlib.h>
 #include <stdio.h>
