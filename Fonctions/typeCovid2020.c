@@ -1,4 +1,4 @@
-/* Code par Teknexx */
+/* Code par TekneX */
 /* https://github.com/Teknexx */
 
 #include <stdlib.h>
